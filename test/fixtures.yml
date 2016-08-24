@@ -1,0 +1,18 @@
+ok:
+  rut: '13704563'
+  dv: 'k'
+formats:
+  full_points: '13.704.563'
+  left_point: '13.704563'
+  right_point: '13704.563'
+  no_points: '13704563'
+  dv: 'K'
+ok2:
+  rut: '14268550'
+  dv: '7'
+ok3:
+  rut: '13370042'
+  dv: '0'
+ok4:
+  rut: '5349903'
+  dv: '1'
