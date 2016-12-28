@@ -124,4 +124,19 @@ class RUT
     return rut.upcase
   end
 
+  ##
+  #This method will give a raw R.U.T. string this method returns boolean wether it no is valid or a hash if string is a valid rut
+  def self.get_rut_and_dv(rut)
+    unless self.validate(rut)
+      return false
+    end
+
+    rut = self.format(rut).split("-")
+
+    out = {
+      :rut => rut.first.delete("."),
+      :dv => rut.last
+    }
+  end
+
 end
