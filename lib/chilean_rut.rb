@@ -34,6 +34,21 @@ class RUT
   end
 
   ##
+  #obfuscated R.U.T with string
+  #
+  #This function returns string with RUT obfuscated
+  def self.obfuscated(rut, replace_string = 'X', obfuscated_len = 2, obfuscated_dv = true)
+    rut = self.get_rut_and_dv(rut)
+
+    rut[:rut][rut[:rut].length - obfuscated_len, rut[:rut].length] = replace_string * obfuscated_len
+    rut[:dv] = (obfuscated_dv) ? replace_string : rut[:dv]
+
+    rut = self.format("#{rut[:rut]}-#{rut[:dv]}")
+
+    return rut
+  end
+
+  ##
   #Given a R.U.T. including its Digito Verificador (whatever the format, i.e. with or without points & hyphens)
   #
   #This function returns boolean wether the Digito Verificador matches the R.U.T. or not

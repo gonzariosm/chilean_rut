@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name    = 'chilean_rut'
-  s.version = '0.3'
-  s.date    = '2016-08-24'
+  s.version = '0.4'
+  s.date    = '2017-03-24'
   s.summary = 'Formato y validacion de RUT Chileno'
   s.authors = ["Gonzalo"]
   s.email   = 'contacto@gonzalorios.cl'
